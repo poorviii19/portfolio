@@ -4,28 +4,65 @@
     "description":"Real time internship portal for students and companies using MERN Stack.",
     "image": "assets/images/placify.png",
     "demo": "#",
-    "github": "https://github.com/poorviii19/Placify.git"
+    "github": "https://github.com/poorviii19/Placify.git",
+     "knowMore":  [
+ "Placify – Student Internship Portal",
+"Planned and built Placify, a MERN stack internship management platform with role-based authentication using JWT tokens and bcrypt-based password hashing to ensure secure user access.",
+"Executed real-time workflows using Socket.IO, enabling live notifications, application status tracking, candidate shortlisting/rejection, and task assignment.",
+"Integrated and optimized AI-driven features using the Gemini AI API to generate newsletters, course content, and task descriptions, improving automation and platform productivity.",
+"Architected and evaluated scalable RESTful APIs and role-specific dashboards for students and companies, supporting internship postings, profile management, application tracking, and notifications.",
+"Tech Stack: MERN (MongoDB, Express.js, React.js, Node.js), Socket.IO, RESTful APIs, bcrypt, Git, Postman."
+
+
+    ]
   },
   {
     "title": "SpalshBook - Service Booking App",
     "description": "An android application for booking various services with user-friendly interface.",
     "image": "assets/images/SplashBook.png",
     "demo": "#",
-    "github": "https://github.com/poorviii19/Splashbook.git"
+    "github": "https://github.com/poorviii19/Splashbook.git",
+     "knowMore":  [
+ "Splash Book : A Dual-Side Mobile Application for Service Bookings",
+"Created and built a native Android application using Kotlin and XML to deliver seamless booking services across salons, boutiques, and home-cleaning categories.",
+"Applied role-based dashboards for efficient inventory, staff scheduling, and booking management.",
+"Implemented Firebase Realtime Database to enable live availability tracking and real-time slot booking",
+"Enhanced authentication and data flow using Firebase Auth and Firestore to achieve secure access and low-latency application performance.",
+"Tech Stack: Kotlin, XML, Firebase Authentication, Firestore, Firebase Realtime Database"
+
+    ]
   },
   {
     "title": "XamXpress - Online Examination System",
     "description": "Dual-portal platform for teachers and students.",
     "image": "assets/images/XamXpress.png",
     "demo": "#",
-    "github": "https://github.com/poorviii19/XamXpress.git"
+    "github": "https://github.com/poorviii19/XamXpress.git",
+    "knowMore":  [
+  "XamXpress : Online Examination Platform",		       	            
+  "Engineered a role-based dual-portal examination platform enabling secure test creation, scheduling, and controlled distribution to individual students or batches.",
+  "Implemented monitoring and validation mechanisms including live webcam and microphone checks to help maintain exam integrity and reduce malpractice risks.",
+  "Built automated evaluation workflows to process student responses, generate instant results, and produce detailed performance reports.",
+  "Improved system usability and reliability by optimizing question navigation, real-time exam handling, and UI backend integration.",
+  "Tech Stack: HTML, CSS, Tailwind CSS, JavaScript, PHP, MySQL, XAMPP"
+
+    ]
+    
   },
   {
     "title": "Inkwell - Blogging Website",
     "description": "A medium-inspired blogging platform built with MERN stack for writing, reading, and community interaction.",
     "image": "assets/images/Inkwell.png",
     "demo": "#",
-    "github": "https://github.com/poorviii19/Inkwell.git"
+    "github": "https://github.com/poorviii19/Inkwell.git",
+    "knowMore": [
+     " Inkwell – Blogging Website ",
+     "Engineered secure user authentication and authorization using JWT tokens and bcrypt hashing, implementing protected routes and role-based access control for authors and admin users.",
+     "Crafted a social engagement layer with follower/following system, post likes, nested comment threads, and bookmark functionality, enabling community interaction across the platform.",
+     "Delivered a responsive, component-driven frontend with reusable UI components, animated page transitions via Framer Motion, and an author dashboard displaying post-performance metrics including views, likes, and comments.",
+     "Tech Stack: MERN Stack, RESTful APIs, bcrypt, Git, Framer Motion, Tailwind"
+
+    ]
   }
 
 ]

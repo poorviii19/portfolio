@@ -1,42 +1,62 @@
 fetch("data/projects.json")
-  .then(res => res.json())
-  .then(data => {
+.then(res => res.json())
+.then(data => {
 
-    const container = document.getElementById("projectContainer");
-    const count = data.length;
+  const container = document.getElementById("projectContainer");
+  const modal = new bootstrap.Modal(document.getElementById("projectModal"));
 
-    let colClass = "";
+  const modalTitle = document.getElementById("modalTitle");
+  const modalPoints = document.getElementById("modalPoints");
 
-    // Decide layout based on number of projects
-    if (count === 1) {
-      colClass = "col-lg-6 col-md-8 mx-auto";
-    } 
-    else if (count === 2) {
-      colClass = "col-md-6";
-    } 
-    else if (count === 3) {
-      colClass = "col-md-4";
-    } 
-    else if (count === 4) {
-      colClass = "col-md-6";
-    } 
-    else {
-      colClass = "col-md-4";
-    }
+  const count = data.length;
+  let colClass = "";
 
-    container.innerHTML = "";
+  if (count === 1) colClass = "col-lg-6 col-md-8 mx-auto";
+  else if (count === 2) colClass = "col-md-6";
+  else if (count === 3) colClass = "col-md-4";
+  else if (count === 4) colClass = "col-md-6";
+  else colClass = "col-md-4";
 
-    data.forEach(p => {
-      container.innerHTML += `
-        <div class="${colClass} mb-5 d-flex justify-content-center">
-          <div class="project-card h-100">
-            <img src="${p.image}" class="img-fluid mb-3 rounded">
-            <h5>${p.title}</h5>
-            <p>${p.description}</p>
-            <a href="${p.github}" class="btn btn-success btn-sm">Github</a>
-          </div>
+  container.innerHTML = "";
+
+  data.forEach((p, index) => {
+
+    container.innerHTML += `
+      <div class="${colClass} mb-5 d-flex justify-content-center">
+        <div class="project-card h-100">
+          <img src="${p.image}" class="img-fluid mb-3 rounded">
+          <h5>${p.title}</h5>
+          <p>${p.description}</p>
+
+          <a href="${p.github}" class="btn btn-success btn-sm">Github</a>
+          <button class="btn btn-primary btn-sm know-btn" data-index="${index}">
+            Know More
+          </button>
+
         </div>
-      `;
+      </div>
+    `;
+  });
+
+  document.querySelectorAll(".know-btn").forEach(btn => {
+
+    btn.addEventListener("click", function(){
+
+      const index = this.getAttribute("data-index");
+      const project = data[index];
+
+      modalTitle.innerText = project.title;
+
+      modalPoints.innerHTML = "";
+
+      project.knowMore.forEach(point => {
+        modalPoints.innerHTML += `<li class="mb-2">${point}</li>`;
+      });
+
+      modal.show();
+
     });
 
   });
+
+});
