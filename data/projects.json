@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Placify - Internship Portal",
+    "description":"Real time internship portal for students and companies using MERN Stack.",
+    "image": "assets/images/placify.png",
+    "demo": "#",
+    "github": "https://github.com/poorviii19/Placify.git"
+  },
+  {
+    "title": "SpalshBook - Service Booking App",
+    "description": "An android application for booking various services with user-friendly interface.",
+    "image": "assets/images/SplashBook.png",
+    "demo": "#",
+    "github": "https://github.com/poorviii19/Splashbook.git"
+  },
+  {
+    "title": "XamXpress - Online Examination System",
+    "description": "Dual-portal platform for teachers and students.",
+    "image": "assets/images/XamXpress.png",
+    "demo": "#",
+    "github": "https://github.com/poorviii19/XamXpress.git"
+  },
+  {
+    "title": "Inkwell - Blogging Website",
+    "description": "A medium-inspired blogging platform built with MERN stack for writing, reading, and community interaction.",
+    "image": "assets/images/Inkwell.png",
+    "demo": "#",
+    "github": "https://github.com/poorviii19/Inkwell.git"
+  }
+
+]

@@ -1,0 +1,162 @@
+/* BUTTON */
+
+.elite-btn{
+  padding:14px 32px;
+  border-radius:12px;
+  font-weight:600;
+  font-size:16px;
+  border:none;
+  cursor:pointer;
+
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  color:white;
+
+  position:relative;
+  overflow:hidden;
+
+  transition:all .35s ease;
+}
+
+/* hover lift */
+
+.elite-btn:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+  0 12px 30px rgba(16,185,129,0.35),
+  0 0 20px rgba(20,184,166,0.25);
+}
+
+/* button shine animation */
+
+.elite-btn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+
+  background:linear-gradient(
+  120deg,
+  transparent,
+  rgba(255,255,255,0.4),
+  transparent
+  );
+
+  transition:0.6s;
+}
+
+.elite-btn:hover::before{
+  left:100%;
+}
+
+/* FORM */
+
+.elite-form input,
+.elite-form textarea{
+
+  width:100%;
+  margin:12px 0;
+  padding:14px;
+
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.08);
+
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(12px);
+
+  color:#ffffff;              /* typed text color */
+  caret-color:#ffffff;        /* cursor color */
+
+  font-size:15px;
+
+  transition:all .3s ease;
+}
+
+
+/* placeholder */
+
+.elite-form input::placeholder,
+.elite-form textarea::placeholder{
+  color:rgba(255,255,255,0.5);
+}
+
+
+/* focus effect */
+
+.elite-form input:focus,
+.elite-form textarea:focus{
+
+  outline:none;
+
+  border:1px solid var(--primary);
+
+  background:rgba(255,255,255,0.06);
+
+  color:#ffffff;              /* keep text white on focus */
+
+  box-shadow:
+  0 0 12px rgba(16,185,129,0.25),
+  inset 0 0 8px rgba(16,185,129,0.15);
+}
+
+
+/* textarea resize control */
+
+.elite-form textarea{
+  resize:none;
+}
+/* ---------- TABLET ---------- */
+
+@media (max-width:992px){
+
+.elite-btn{
+  padding:12px 26px;
+  font-size:15px;
+}
+
+.elite-form input,
+.elite-form textarea{
+  padding:12px;
+  font-size:14px;
+}
+
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width:768px){
+
+.elite-btn{
+  width:100%;
+  padding:12px;
+  font-size:14px;
+}
+
+.elite-form input,
+.elite-form textarea{
+  padding:11px;
+  font-size:14px;
+}
+
+}
+
+
+/* ---------- SMALL PHONES ---------- */
+
+@media (max-width:480px){
+
+.elite-btn{
+  padding:10px;
+  font-size:13px;
+}
+
+.elite-form input,
+.elite-form textarea{
+  padding:10px;
+  font-size:13px;
+}
+
+}

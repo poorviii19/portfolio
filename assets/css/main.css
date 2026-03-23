@@ -1,0 +1,145 @@
+:root{
+  --primary:#10B981;     /* emerald */
+  --accent:#14B8A6;      /* teal */
+  --dark-bg:#020617;
+  --dark-secondary:#07121A;
+  --card-bg:rgba(255,255,255,0.05);
+  --text:#E5E7EB;
+}
+
+/* BODY */
+
+body{
+  background:
+  radial-gradient(circle at 10% 20%, rgba(16,185,129,0.15), transparent 40%),
+  radial-gradient(circle at 85% 80%, rgba(20,184,166,0.15), transparent 40%),
+  linear-gradient(135deg,#020617,#07121A,#020617);
+
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  overflow-x:hidden;
+}
+
+/* subtle texture for premium look */
+
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:url("https://www.transparenttextures.com/patterns/noise.png");
+  opacity:0.03;
+  pointer-events:none;
+}
+
+/* HERO */
+
+.hero{
+  height:100vh;
+  background:
+  radial-gradient(circle at 20% 25%, rgba(16,185,129,0.25), transparent 40%),
+  radial-gradient(circle at 80% 70%, rgba(20,184,166,0.25), transparent 40%),
+  linear-gradient(135deg,#020617,#07121A);
+  position:relative;
+}
+
+/* hero glow */
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle, rgba(16,185,129,0.25), transparent);
+  top:-200px;
+  left:-200px;
+  filter:blur(120px);
+}
+
+/* animated glow */
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle, rgba(20,184,166,0.2), transparent);
+  bottom:-150px;
+  right:-150px;
+  filter:blur(120px);
+}
+
+/* SECTION */
+
+.section{
+  padding:120px 0;
+  position:relative;
+}
+
+/* DARK SECTIONS */
+
+.dark{
+  background:
+  radial-gradient(circle at 70% 20%, rgba(16,185,129,0.08), transparent 40%),
+  linear-gradient(135deg,#07121A,#020617);
+}
+
+/* FOOTER */
+
+footer{
+  background:#020617;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+/* CONTACT IMAGE */
+
+.contact-photo{
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-left:80px;
+
+  border:4px solid rgba(255,255,255,0.05);
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,0.6),
+  0 0 25px rgba(16,185,129,0.2);
+
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+
+/* hover effect */
+
+.contact-photo:hover{
+  transform:scale(1.05);
+  box-shadow:
+  0 25px 60px rgba(0,0,0,0.7),
+  0 0 40px rgba(16,185,129,0.35);
+}
+
+/* TABLET */
+
+@media (max-width:992px){
+
+.contact-photo{
+  width:280px;
+  height:280px;
+  margin-left:0;
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.contact-photo{
+  width:240px;
+  height:240px;
+  margin:30px auto 0 auto;
+}
+
+}
